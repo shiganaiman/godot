@@ -42,7 +42,7 @@ public partial class Main : Node
   // We also specified this function name in PascalCase in the editor's connection window.
   private void OnScoreTimerTimeout()
   {
-    GD.Print("Score: ", _score);
+    // GD.Print("Score: ", _score);
     _score++;
   }
 
@@ -55,7 +55,7 @@ public partial class Main : Node
 
   private void OnMobTimerTimeout()
   {
-    GD.Print("MobTimerTimeout");
+    // GD.Print("MobTimerTimeout");
     // Note: Normally it is best to use explicit types rather than the `var`
     // keyword. However, var is acceptable to use here because the types are
     // obviously Mob and PathFollow2D, since they appear later on the line.
@@ -83,7 +83,6 @@ public partial class Main : Node
     mob.LinearVelocity = velocity.Rotated(direction);
 
     // Spawn the mob by adding it to the Main scene.
-    GD.Print(mob);
     AddChild(mob);
   }
 

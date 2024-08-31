@@ -15,8 +15,8 @@ public partial class Player : Area2D
   public override void _Ready()
   {
     ScreenSize = GetViewportRect().Size;
-    // Hide();
-    // BodyEntered += OnBodyEntered;
+    Hide();
+    BodyEntered += OnBodyEntered;
   }
 
   public void Start(Vector2 position)

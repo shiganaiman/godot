@@ -10,6 +10,9 @@ public partial class Main : Node
 
   public override void _Ready()
   {
+    // シーンのリソースを指定
+    MobScene = (PackedScene)ResourceLoader.Load("res://mob.tscn");
+
     var startTimer = GetNode<Timer>("StartTimer");
     startTimer.Timeout += OnStartTimerTimeout;
 

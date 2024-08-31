@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://df3w1tycdt23t"]
+[gd_scene load_steps=4 format=3 uid="uid://df3w1tycdt23t"]
 
 [ext_resource type="Script" path="res://Main.cs" id="1_tc0xd"]
 [ext_resource type="PackedScene" uid="uid://dyfjb7hs14jt7" path="res://player.tscn" id="2_k6uia"]
-[ext_resource type="PackedScene" uid="uid://4b44f7y8hl1h" path="res://mob.tscn" id="2_u1ysx"]
 
 [sub_resource type="Curve2D" id="Curve2D_wcbbl"]
 _data = {
@@ -12,7 +11,6 @@ point_count = 5
 
 [node name="Main" type="Node"]
 script = ExtResource("1_tc0xd")
-MobScene = ExtResource("2_u1ysx")
 
 [node name="MobTimer" type="Timer" parent="."]
 wait_time = 0.5

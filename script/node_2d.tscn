@@ -5,16 +5,16 @@
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Sprite2D" parent="." instance=ExtResource("1_q1c5s")]
-position = Vector2(591, 364)
-script = ExtResource("2_h7w4q")
-
-[node name="BlinkingTimer" type="Timer" parent="Sprite2D"]
-autostart = true
-
 [node name="ToggleButton" type="Button" parent="."]
 offset_left = 86.0
 offset_top = 87.0
 offset_right = 368.0
 offset_bottom = 168.0
 text = "toggle motion"
+
+[node name="Sprite2D" parent="." instance=ExtResource("1_q1c5s")]
+position = Vector2(591, 364)
+script = ExtResource("2_h7w4q")
+
+[node name="BlinkingTimer" type="Timer" parent="Sprite2D"]
+autostart = true

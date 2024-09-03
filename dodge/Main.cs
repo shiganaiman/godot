@@ -79,6 +79,7 @@ public partial class Main : Node
     // obviously Mob and PathFollow2D, since they appear later on the line.
     // Create a new instance of the Mob scene.
     Mob mob = MobScene.Instantiate<Mob>();
+    mob.AddToGroup("mobs");
 
     // Choose a random location on Path2D.
     var mobSpawnLocation = GetNode<PathFollow2D>("MobPath/MobSpawnLocation");

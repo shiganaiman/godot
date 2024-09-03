@@ -1,5 +1,5 @@
-using Godot;
 using System;
+using Godot;
 
 public partial class Main : Node
 {
@@ -21,7 +21,7 @@ public partial class Main : Node
 
     var mobTimer = GetNode<Timer>("MobTimer");
     mobTimer.Timeout += OnMobTimerTimeout;
-    
+
     var scoreTimer = GetNode<Timer>("ScoreTimer");
     scoreTimer.Timeout += OnScoreTimerTimeout;
 

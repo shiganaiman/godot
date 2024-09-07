@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://bntl4b357hjfw"]
+
+[ext_resource type="Texture2D" uid="uid://b7rqhy65et0ug" path="res://arts/bar128x32.png" id="1_4kuwo"]
+[ext_resource type="Script" path="res://Paddle.cs" id="1_cb3yn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tgs7d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_4kuwo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7fgys"]
+size = Vector2(124, 27)
+
+[node name="Paddle" type="CharacterBody2D"]
+script = ExtResource("1_cb3yn")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_tgs7d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_7fgys")

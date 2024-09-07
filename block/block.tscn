@@ -1,0 +1,62 @@
+[gd_scene load_steps=8 format=3 uid="uid://cxljo8jbeqrew"]
+
+[ext_resource type="Texture2D" uid="uid://da3yvtmcr1fln" path="res://arts/block_blue64x24.png" id="1_nblwv"]
+[ext_resource type="Texture2D" uid="uid://yka81isn1xlw" path="res://arts/block_green64x24.png" id="2_1gmg7"]
+[ext_resource type="Texture2D" uid="uid://5txq1s8k01iv" path="res://arts/block_purple64x24.png" id="3_1o6ip"]
+[ext_resource type="Texture2D" uid="uid://ckgh3g2ye4ofh" path="res://arts/block_red64x24.png" id="4_ffiuy"]
+[ext_resource type="Texture2D" uid="uid://btjm2yoqml67v" path="res://arts/block_yellow64x24.png" id="5_la5be"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e685t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nblwv")
+}],
+"loop": true,
+"name": &"blue",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_1gmg7")
+}],
+"loop": true,
+"name": &"green",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_1o6ip")
+}],
+"loop": true,
+"name": &"purple",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ffiuy")
+}],
+"loop": true,
+"name": &"red",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_la5be")
+}],
+"loop": true,
+"name": &"yellow",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d1wew"]
+size = Vector2(62, 20)
+
+[node name="Block" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_e685t")
+animation = &"blue"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_d1wew")

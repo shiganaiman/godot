@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://bn2ys1bb20fbs"]
+
+[ext_resource type="Script" path="res://Main.cs" id="1_ct0od"]
+[ext_resource type="PackedScene" uid="uid://bntl4b357hjfw" path="res://paddle.tscn" id="2_bv3h2"]
+[ext_resource type="PackedScene" uid="uid://bjr2hde21ityi" path="res://ball.tscn" id="3_f8qi7"]
+[ext_resource type="PackedScene" uid="uid://c8dwygnhxbefv" path="res://wall.tscn" id="4_x856x"]
+[ext_resource type="PackedScene" uid="uid://b6igeqj711ruy" path="res://level_1.tscn" id="5_qaisx"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_ct0od")
+
+[node name="Paddle" parent="." instance=ExtResource("2_bv3h2")]
+position = Vector2(976, 913)
+
+[node name="Ball" parent="." instance=ExtResource("3_f8qi7")]
+position = Vector2(976, 872)
+
+[node name="RightWall" parent="." instance=ExtResource("4_x856x")]
+position = Vector2(1284, 2.08165e-12)
+scale = Vector2(1, 128)
+
+[node name="LeftWall" parent="." instance=ExtResource("4_x856x")]
+position = Vector2(-4, 2.08165e-12)
+scale = Vector2(1, 128)
+
+[node name="TopWall" parent="." instance=ExtResource("4_x856x")]
+position = Vector2(0, -4)
+rotation = -1.5708
+scale = Vector2(1, 160)
+
+[node name="Level1" parent="." instance=ExtResource("5_qaisx")]

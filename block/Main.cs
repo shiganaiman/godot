@@ -3,34 +3,25 @@ using System;
 
 public partial class Main : Node
 {
-    // Called when the node enters the scene tree for the first time.
-    public override void _Ready()
+  [Export]
+  public PackedScene BallScene { get; set; }
+
+  public override void _Ready()
+  {
+        // シーンのリソースを指定
+    BallScene = (PackedScene)ResourceLoader.Load("res://ball.tscn");
+  }
+
+  public override void _Process(double delta)
+  {
+    if (Input.IsActionJustPressed("space"))
     {
-        // var paddle = GetNode<Paddle>("Paddle");
-        // var ball = GetNode<Ball>("Ball");
-        // var bricks = GetNode<Brick>("Bricks");
-
-        // ball.BodyEntered += (body) =>
-        // {
-        //   if (body.IsInGroup("bricks"))
-        //   {
-        //     body.QueueFree();
-        //   }
-        // };
-
-        // foreach (var brick in bricks.GetChildren())
-        // {
-        //   if (brick is Brick)
-        //   {
-        //     var animatedSprite2D = (brick as Brick).GetNode<AnimatedSprite2D>("AnimatedSprite2D");
-        //     string[] mobTypes = animatedSprite2D.SpriteFrames.GetAnimationNames();
-        //     animatedSprite2D.Play(mobTypes[GD.Randi() % mobTypes.Length]);
-        //   }
-        // }
+      var paddle = GetNode<Paddle>("Paddle");
+      // var ball = GetNode<Ball>("Ball");
+      var ball = BallScene.Instantiate<Ball>();
+      ball.AddToGroup("balls");
+      ball.Start(paddle.Position + new Vector2(0, -32));
+      AddChild(ball);
     }
-
-    // Called every frame. 'delta' is the elapsed time since the previous frame.
-    public override void _Process(double delta)
-    {
-    }
+  }
 }

@@ -6,7 +6,7 @@ public partial class Paddle : CharacterBody2D
 
 
     [Export]
-    public int Speed { get; set; } = 400;
+    public int Speed { get; set; } = 700;
 
 
     public override void _Ready()
@@ -14,7 +14,7 @@ public partial class Paddle : CharacterBody2D
 
     }
 
-    public override void _Process(double delta)
+    public override void _PhysicsProcess(double delta)
     {
         var velocity = Vector2.Zero;
 
@@ -37,7 +37,8 @@ public partial class Paddle : CharacterBody2D
             velocity = Vector2.Zero;
         }
 
-        Position += velocity * (float)delta;
+        MoveAndCollide(velocity * (float)delta);
+
     }
 
 }

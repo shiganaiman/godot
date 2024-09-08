@@ -1,11 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bjr2hde21ityi"]
+[gd_scene load_steps=5 format=3 uid="uid://bjr2hde21ityi"]
 
 [ext_resource type="Texture2D" uid="uid://bx4p5n7flechk" path="res://arts/ball32x32.png" id="1_4ls6f"]
 [ext_resource type="Script" path="res://Ball.cs" id="1_ag4b5"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_shf0h"]
-friction = 0.0
-bounce = 1.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fsyia"]
 animations = [{
@@ -21,13 +17,8 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_mknkc"]
 radius = 15.0
 
-[node name="Ball" type="RigidBody2D"]
-mass = 0.001
-physics_material_override = SubResource("PhysicsMaterial_shf0h")
-gravity_scale = 1.66533e-16
-freeze_mode = 1
-linear_damp_mode = 1
-angular_damp_mode = 1
+[node name="Ball" type="CharacterBody2D"]
+collision_layer = 0
 script = ExtResource("1_ag4b5")
 metadata/_edit_group_ = true
 

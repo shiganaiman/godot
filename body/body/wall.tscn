@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://di770oxc7rpf"]
+
+[ext_resource type="Texture2D" uid="uid://bgf6jm7t03myg" path="res://icon.svg" id="1_rjuax"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wb8wo"]
+size = Vector2(128, 128)
+
+[node name="Wall" type="StaticBody2D"]
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture = ExtResource("1_rjuax")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_wb8wo")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -51.0
+offset_top = -89.0
+offset_right = 52.0
+offset_bottom = -66.0
+text = "StaticBody2D"

@@ -1,39 +1,67 @@
 using Godot;
 using System;
 
-public partial class Ball : RigidBody2D
+public partial class Ball : CharacterBody2D
 {
 
-    [Export]
-    public int Speed { get; set; } = 600;
+  [Export]
+  public int Speed { get; set; } = 600;
 
-    // Called when the node enters the scene tree for the first time.
-    public override void _Ready()
+  public Vector2 velocity { get; set; } = new Vector2();
+
+  // Called when the node enters the scene tree for the first time.
+  public override void _Ready()
+  {
+    // velocity = new Vector2((float)1, (float)-1).Normalized() * Speed;
+  }
+
+  public void Start(Vector2 startPosition)
+  {
+    Position = startPosition;
+    velocity = new Vector2((float)1, (float)-1).Normalized() * Speed;
+  }
+
+  public override void _PhysicsProcess(double delta)
+  {
+    var collision = MoveAndCollide(velocity * (float)delta);
+
+    if (collision == null)
     {
-        var velocity = new Vector2((float)1, (float)-1).Normalized() * Speed;
-        ApplyCentralImpulse(velocity);
-
-        SetContactMonitor(true);
-        SetMaxContactsReported(1);
-        BodyEntered += OnBodyEntered;
-
-        // OnBodyEntered += OnBodyEntered;
-
+      GD.Print("Collision");
+      return;
     }
 
-    // public override void PhysicsProcess(float delta)
-    // {
-    //   GD.Print("Ball collided with something");
-    // }
+    var collider = collision.GetCollider() as Node2D;
 
-    public void OnBodyEntered(Node body)
+    if (collider.IsInGroup("balls"))
     {
-        GD.Print("Ball collided with something");
-        GD.Print(body.GetGroups());
-        if (body.IsInGroup("bricks"))
-        {
-            GD.Print("Ball collided with a brick");
-            body.QueueFree();
-        }
+      velocity = velocity.Bounce(collision.GetNormal());
+      return;
     }
+
+
+    if (collider.IsInGroup("bricks"))
+    {
+      var brick = (Brick)collider;
+      GD.Print("Ball collided with a brick");
+      brick.AddDamage(1);
+      velocity = velocity.Bounce(collision.GetNormal());
+      return;
+    }
+
+    if (collider.IsInGroup("paddles"))
+    {
+      GD.Print("Ball collided with the paddle");
+      velocity = velocity.Bounce(collision.GetNormal());
+      return;
+    }
+
+    if (collider.IsInGroup("walls"))
+    {
+      GD.Print("Ball collided with a wall");
+      velocity = velocity.Bounce(collision.GetNormal());
+      return;
+    }
+  }
+
 }

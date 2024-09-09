@@ -27,7 +27,6 @@ public partial class Ball : CharacterBody2D
 
     if (collision == null)
     {
-      GD.Print("Collision");
       return;
     }
 
@@ -35,10 +34,20 @@ public partial class Ball : CharacterBody2D
 
     if (collider.IsInGroup("balls"))
     {
+      GD.Print("Ball collided with another ball");
       velocity = velocity.Bounce(collision.GetNormal());
       return;
     }
 
+    if (collider.IsInGroup("enemies"))
+    {
+      var enemy = (Enemy)collider;
+      GD.Print("Ball collided with an enemy");
+      var normal = collision.GetNormal();
+      enemy.AddDamage(1, normal);
+      velocity = velocity.Bounce(normal);
+      return;
+    }
 
     if (collider.IsInGroup("bricks"))
     {

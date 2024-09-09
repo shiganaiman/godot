@@ -1,5 +1,5 @@
-using Godot;
 using System;
+using Godot;
 
 public partial class Brick : StaticBody2D
 {
@@ -16,9 +16,11 @@ public partial class Brick : StaticBody2D
     hpLabel.Text = hp.ToString();
   }
 
-  public void AddDamage(int damage) {
+  public void AddDamage(int damage)
+  {
     hp -= damage;
-    if (hp <= 0) {
+    if (hp <= 0)
+    {
       QueueFree();
     }
     var hpLabel = GetNode<Label>("HpLabel");

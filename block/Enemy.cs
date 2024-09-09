@@ -1,5 +1,5 @@
-using Godot;
 using System;
+using Godot;
 
 public partial class Enemy : CharacterBody2D
 {
@@ -23,12 +23,13 @@ public partial class Enemy : CharacterBody2D
     var hitTimer = GetNode<Timer>("HitTimer");
     hitTimer.Timeout += OnHitTimerTimeout;
 
-
   }
 
-  public void AddDamage(int damage, Vector2 normal) {
+  public void AddDamage(int damage, Vector2 normal)
+  {
     hp -= damage;
-    if (hp <= 0) {
+    if (hp <= 0)
+    {
       QueueFree();
     }
     var animatedSprite2D = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
@@ -39,23 +40,24 @@ public partial class Enemy : CharacterBody2D
     shakeNormal = normal;
     var hpLabel = GetNode<Label>("HpLabel");
     hpLabel.Text = hp.ToString();
- 
+
   }
 
-  public override void _PhysicsProcess(double delta) {
+  public override void _PhysicsProcess(double delta)
+  {
     // 時間経過に基づいて揺れを実現
     //
-    if (!isHit) {
+    if (!isHit)
+    {
       return;
     }
     time += (float)delta * shakeSpeed;
-    // float shakeOffset = Mathf.Sin(time) * shakeAmplitude;
     Vector2 shakeOffset = shakeNormal * Mathf.Sin(time) * shakeAmplitude;
     Position = originalPosition + shakeOffset;
-    // Position = new Vector2(originalPosition.X + shakeOffset, originalPosition.Y);
   }
 
-  public void OnHitTimerTimeout() {
+  public void OnHitTimerTimeout()
+  {
     var animatedSprite2D = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
     animatedSprite2D.Animation = "default";
     isHit = false;

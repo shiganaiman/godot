@@ -150,97 +150,97 @@ position = Vector2(164, 464)
 position = Vector2(342, 464)
 
 [node name="Brick33" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(992, 353)
+position = Vector2(1058, 353)
 
 [node name="Brick34" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(939, 353)
+position = Vector2(1005, 353)
 
 [node name="Brick42" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(1055, 353)
+position = Vector2(997, 81)
 
 [node name="Brick43" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(815, 353)
+position = Vector2(1058, 217)
 
 [node name="Brick51" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(403, 217)
+position = Vector2(215, 81)
 
 [node name="Brick52" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(815, 217)
+position = Vector2(1058, 81)
 
 [node name="Brick55" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(403, 353)
+position = Vector2(215, 217)
 
 [node name="Brick56" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(878, 217)
+position = Vector2(679, 49)
 
 [node name="Brick57" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(878, 353)
+position = Vector2(487, 49)
 
 [node name="Brick58" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(992, 379)
+position = Vector2(1058, 379)
 
 [node name="Brick59" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(939, 379)
+position = Vector2(1005, 379)
 
 [node name="Brick60" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(1055, 379)
+position = Vector2(997, 107)
 
 [node name="Brick61" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(815, 379)
+position = Vector2(1058, 243)
 
 [node name="Brick62" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(403, 243)
+position = Vector2(215, 107)
 
 [node name="Brick63" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(815, 243)
+position = Vector2(1058, 107)
 
 [node name="Brick64" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(403, 379)
+position = Vector2(215, 243)
 
 [node name="Brick65" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(878, 243)
+position = Vector2(679, 75)
 
 [node name="Brick66" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(878, 379)
+position = Vector2(487, 75)
 
 [node name="Brick67" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(992, 328)
+position = Vector2(1058, 328)
 
 [node name="Brick68" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(939, 328)
+position = Vector2(1005, 328)
 
 [node name="Brick69" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(1055, 328)
+position = Vector2(997, 56)
 
 [node name="Brick70" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(815, 328)
+position = Vector2(1058, 192)
 
 [node name="Brick71" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(403, 192)
+position = Vector2(215, 56)
 
 [node name="Brick72" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(815, 192)
+position = Vector2(1058, 56)
 
 [node name="Brick73" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(403, 328)
+position = Vector2(215, 192)
 
 [node name="Brick74" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(878, 192)
+position = Vector2(679, 24)
 
 [node name="Brick75" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(878, 328)
+position = Vector2(487, 24)
 
 [node name="Brick76" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(277, 217)
+position = Vector2(615, 49)
 
 [node name="Brick77" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(939, 217)
+position = Vector2(997, 217)
 
 [node name="Brick78" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(340, 217)
+position = Vector2(152, 81)
 
 [node name="Brick79" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(279, 353)
+position = Vector2(551, 49)
 
 [node name="Brick80" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
 position = Vector2(226, 353)
@@ -249,19 +249,19 @@ position = Vector2(226, 353)
 position = Vector2(164, 353)
 
 [node name="Brick82" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(342, 353)
+position = Vector2(154, 217)
 
 [node name="Brick83" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(277, 243)
+position = Vector2(615, 75)
 
 [node name="Brick84" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(939, 243)
+position = Vector2(997, 243)
 
 [node name="Brick85" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(340, 243)
+position = Vector2(152, 107)
 
 [node name="Brick86" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(279, 379)
+position = Vector2(551, 75)
 
 [node name="Brick87" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
 position = Vector2(226, 379)
@@ -270,19 +270,19 @@ position = Vector2(226, 379)
 position = Vector2(164, 379)
 
 [node name="Brick89" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(342, 379)
+position = Vector2(154, 243)
 
 [node name="Brick90" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(277, 192)
+position = Vector2(615, 24)
 
 [node name="Brick91" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(939, 192)
+position = Vector2(997, 192)
 
 [node name="Brick92" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(340, 192)
+position = Vector2(152, 56)
 
 [node name="Brick93" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(279, 328)
+position = Vector2(551, 24)
 
 [node name="Brick94" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
 position = Vector2(226, 328)
@@ -291,7 +291,10 @@ position = Vector2(226, 328)
 position = Vector2(164, 328)
 
 [node name="Brick96" parent="." groups=["bricks"] instance=ExtResource("1_ho0jv")]
-position = Vector2(342, 328)
+position = Vector2(154, 192)
 
 [node name="Enemy" parent="." groups=["enemies"] instance=ExtResource("2_vn7ns")]
-position = Vector2(608, 240)
+position = Vector2(424, 248)
+
+[node name="Enemy" parent="Enemy" groups=["enemies"] instance=ExtResource("2_vn7ns")]
+position = Vector2(320, 0)

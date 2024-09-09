@@ -1,5 +1,5 @@
-using Godot;
 using System;
+using Godot;
 
 public partial class Main : Node
 {
@@ -8,7 +8,7 @@ public partial class Main : Node
 
   public override void _Ready()
   {
-        // シーンのリソースを指定
+    // シーンのリソースを指定
     BallScene = (PackedScene)ResourceLoader.Load("res://ball.tscn");
   }
 
